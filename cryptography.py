@@ -13,9 +13,10 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 message = str(input("Message: "))
 key = str(input("Key: ")
-if command == "e":
 
-elif command == "d":
+#if command == "e":
+
+#elif command == "d":
 
 elif command == "q":
     print("Goodbye!")
