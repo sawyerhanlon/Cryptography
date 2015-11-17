@@ -30,13 +30,7 @@ while a:
         elist = []
         if command == "e":
             modkey = evenstrings(message, key)
-            b = True
-            while True:
-                x = len(modkey)
-                elist.append(modkey[x])
-                x -= 1
-                if x == 0:
-                    b = False
+            
                 
     
 
