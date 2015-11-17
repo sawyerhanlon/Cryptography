@@ -27,14 +27,21 @@ while a:
         associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
         message = str(input("Message: "))
         key = str(input("Key: "))
-
+        elist = []
         if command == "e":
             modkey = evenstrings(message, key)
-            print(modkey)
+            b = True
+            while True:
+                x = len(modkey)
+                elist.append(modkey[x])
+                x -= 1
+                if x == 0:
+                    b = False
+                
     
 
         elif command == "d":
-            print("Morgan ur wrong")
+            print("")
 
     elif command == "q":
         print("Goodbye!")
