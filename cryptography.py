@@ -9,7 +9,7 @@ Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
-def evenstrings():
+def evenstrings(message, key):
     messlen = len(message)
     keylen = len(key)
     if keylen < messlen:
@@ -29,16 +29,18 @@ def evenstrings():
     
 a = True
 while a:
-    associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
     command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
-    message = str(input("Message: "))
-    key = str(input("Key: "))
+    if command != "q":
+        associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+        message = str(input("Message: "))
+        key = str(input("Key: "))
 
-    if command == "e":
-        modkey = evenstrings(message, key)
+        if command == "e":
+            modkey = evenstrings(message, key)
     
 
-    elif command == "d":
+        elif command == "d":
+            print("Morgan ur wrong")
 
     elif command == "q":
         print("Goodbye!")
