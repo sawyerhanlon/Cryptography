@@ -13,9 +13,9 @@ def evenstrings():
     messlen = len(message)
     keylen = len(key)
     if keylen < messlen:
-        modkey = (messlen // keylen)*key
+        modkey1 = (messlen // keylen)*key
         modkey2 = key[(messlen % keylen)-1]
-        return modkey + modkey2
+        return modkey1 + modkey2
     elif keylen == messlen:
         return key
     else:
@@ -35,7 +35,7 @@ while a:
     key = str(input("Key: "))
 
     if command == "e":
-        new
+        modkey = evenstrings(message, key)
     
 
     elif command == "d":
