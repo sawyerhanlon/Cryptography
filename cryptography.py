@@ -9,12 +9,22 @@ Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
-def encrypt():
+def evenstrings():
+    messlen = len(message)
+    keylen = len(key)
+    if keylen < messlen:
+        modkey = (messlen // keylen)*key
+        modkey2 = key[(messlen % keylen)-1]
+        return modkey + modkey2
+    elif keylen == messlen:
+        return key
+    else:
+        return key[messlen]
     
     
     
     
-def decrypt():
+
     
     
 a = True
@@ -25,7 +35,7 @@ while a:
     key = str(input("Key: "))
 
     if command == "e":
-        
+        new
     
 
     elif command == "d":
