@@ -22,7 +22,7 @@ def evenstrings(message, key):
         return key[messlen]
 a = True
 while a:
-    command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if command != "q":
         associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
         message = input("Message: ")
