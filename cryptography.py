@@ -29,26 +29,35 @@ while a:
         key = str(input("Key: "))
         elist = []
         elist2 = []
+        elist3 = []
         if command == "e":
             modkey = evenstrings(message, key)
             for a in message:
                 messa = associations.find(a)
                 elist.append(messa)
-            for b in key:
-                keya = associations.find(b)
-                elist2.append(b)
-            ziplist = zip(elist,elist2)
-            print(ziplist)
-            
-            
-            
-            
-                
-    
-
+            for b in modkey:
+                modkeya = associations.find(b)
+                elist2.append(modkeya)
+            ziplist = list(zip(elist,elist2))
+            for z in ziplist:
+                elist3.append(z[0]+z[1])
+            for c in elist3:
+                print(associations[c], end='')
+            print('')
         elif command == "d":
-            print("")
-
+            modkey = evenstrings(message, key)
+            for a in message:
+                messa = associations.find(a)
+                elist.append(messa)
+            for b in modkey:
+                modkeya = associations.find(b)
+                elist2.append(modkeya)
+            ziplist = list(zip(elist,elist2))
+            for z in ziplist:
+                elist3.append(z[0]-z[1])
+            for c in elist3:
+                print(associations[c], end='')
+            print('')
     elif command == "q":
         print("Goodbye!")
         a = False
