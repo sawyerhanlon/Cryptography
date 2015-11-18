@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Sawyer Hanlon
+Credit: Morgan Melliment
 
 Assignment:
 
@@ -28,8 +28,20 @@ while a:
         message = str(input("Message: "))
         key = str(input("Key: "))
         elist = []
+        elist2 = []
         if command == "e":
             modkey = evenstrings(message, key)
+            for a in message:
+                messa = associations.find(a)
+                elist.append(messa)
+            for b in key:
+                keya = associations.find(b)
+                elist2.append(b)
+            ziplist = zip(elist,elist2)
+            print(ziplist)
+            
+            
+            
             
                 
     
