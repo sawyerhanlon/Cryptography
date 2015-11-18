@@ -25,8 +25,8 @@ while a:
     command = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if command != "q":
         associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-        message = str(input("Message: "))
-        key = str(input("Key: "))
+        message = input("Message: ")
+        key = input("Key: ")
         elist = []
         elist2 = []
         elist3 = []
