@@ -19,7 +19,7 @@ def evenstrings(message, key):
     elif keylen == messlen:
         return key
     else:
-        return key[0:messlen]
+        return key[messlen]
 a = True
 while a:
     command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
