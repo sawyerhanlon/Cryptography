@@ -40,7 +40,10 @@ while a:
                 elist2.append(modkeya)
             ziplist = list(zip(elist,elist2))
             for z in ziplist:
-                elist3.append(z[0]+z[1])
+                if z[0] + z[1] > 84:
+                    elist3.append((z[0]+z[1]) % 85)
+                else:
+                    elist3.append(z[0]+z[1])
             for c in elist3:
                 print(associations[c], end='')
             print('')
@@ -54,7 +57,10 @@ while a:
                 elist2.append(modkeya)
             ziplist = list(zip(elist,elist2))
             for z in ziplist:
-                elist3.append(z[0]-z[1])
+                if z[0] - z[1] < 0:
+                    elist3.append((z[0]-z[1]) + 85)
+                else:
+                    elist3.append(z[0]-z[1])
             for c in elist3:
                 print(associations[c], end='')
             print('')
